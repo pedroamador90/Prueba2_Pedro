@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160416011844) do
+ActiveRecord::Schema.define(version: 20160416021640) do
 
   create_table "inventarios", force: :cascade do |t|
     t.string   "num_serie"
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 20160416011844) do
 
   add_index "operacions", ["inventario_id"], name: "index_operacions_on_inventario_id"
   add_index "operacions", ["trabajador_id"], name: "index_operacions_on_trabajador_id"
+
+  create_table "registros", force: :cascade do |t|
+    t.text     "descripcion"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "trabajadors", force: :cascade do |t|
     t.string   "nombre"
