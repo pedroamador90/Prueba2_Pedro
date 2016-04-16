@@ -2,10 +2,10 @@
 
 one:
   num_serie: MyString
-  tamanio: 
+  tamanio: 1
   descripcion: MyText
 
 two:
   num_serie: MyString
-  tamanio: 
+  tamanio: 1
   descripcion: MyText
