@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trabajo: "Primer trabajo"
+  trabajador_id: 1
+
+two:
+  trabajo: "Segundo trabajo"
+  trabajador_id: 2
+three:
+  trabajo: "Tercer trabajo"
+  trabajador_id: 1
+

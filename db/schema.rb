@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160416005508) do
+ActiveRecord::Schema.define(version: 20160416010216) do
 
   create_table "inventarios", force: :cascade do |t|
     t.string   "num_serie"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20160416005508) do
   end
 
   add_index "inventarios", ["num_serie"], name: "index_inventarios_on_num_serie", unique: true
+
+  create_table "operacions", force: :cascade do |t|
+    t.string   "trabajo"
+    t.integer  "trabajador_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "operacions", ["trabajador_id"], name: "index_operacions_on_trabajador_id"
 
   create_table "trabajadors", force: :cascade do |t|
     t.string   "nombre"
